@@ -1,6 +1,8 @@
 pipeline {
-        agent none
- environment {
+ agent{
+         docker { image 'ros:foxy' }
+         
+   }       environment {
     PACKAGE_NAME = 'v2x'
     ROS_WORKSPACE = "${WORKSPACE}_ws"
   }
