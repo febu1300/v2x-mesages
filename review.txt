@@ -1,0 +1,4 @@
+1. RequestorDescription.msg
+transit_status :  TransitVehicleStatus of type BIt STRING ??
+name : DescriptiveName ::= IA5String (SIZE(1..63)) ??
+
