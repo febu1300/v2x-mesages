@@ -16,6 +16,7 @@ pipeline {
  	{
  	steps {
  	        sh """
+ 	           echo whoami
  	           cd /opt/jenkins/workspace
  	           ./opt/jenkins/workspace/ros_entrypoint.sh
 		
