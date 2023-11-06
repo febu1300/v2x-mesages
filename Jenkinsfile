@@ -16,7 +16,7 @@ pipeline {
  	{
  	steps {
  	        sh """
- 	           sh '/opt/ros_entrypoint.sh '
+ 	           sh '/opt/ros_entrypoint.sh'
 		
                 """
                 }
