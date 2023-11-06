@@ -1,6 +1,6 @@
 pipeline {
    agent{
-         docker.image('ros:foxy').inside
+         docker.image('ros:foxy')
          {
  	  	sh ros_entrypoint.sh
  	 }
