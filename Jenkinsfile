@@ -14,6 +14,7 @@ pipeline {
     stages {
  	stage('Initialize')
  	{
+ 	steps {
  	        sh """
  	        echo "$(whoami)"
 		echo "Set disable_coredump false" >> /etc/sudo.conf
@@ -21,6 +22,7 @@ pipeline {
 			EXEC="exec"
 		
                 """
+                }
  	}
         stage('Setup') {
             steps {
