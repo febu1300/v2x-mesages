@@ -15,7 +15,7 @@ pipeline {
  	stage('Initialize')
  	{
  	steps {
- 	        sh 'opt/jenkins/workspace/ros_entrypoint.sh'
+ 	        sh '/opt/jenkins/workspace/ros_entrypoint.sh'
                 }
  	}
         stage('Setup') {
