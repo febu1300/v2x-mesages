@@ -1,7 +1,6 @@
 pipeline {
-   agent{
-         docker { image 'ros:foxy' }
-        }       
+   agent any
+ 
    environment {
    	 DEFAULT_USER = 'ubuntu'
    	 USER_UID = '1000'
@@ -14,6 +13,7 @@ pipeline {
     stages {
  	stage('Initialize')
  	{
+ 	  docker { image 'ros:foxy' }
  	     script {
                    
                     def testImage = docker.image('ros:foxy')
