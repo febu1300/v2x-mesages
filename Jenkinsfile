@@ -1,9 +1,6 @@
 pipeline {
    agent{
-         docker.image('ros:foxy')
-         {
- 	  	sh ros_entrypoint.sh
- 	 }
+         docker { image 'ros:foxy' }
         }       
    environment {
    	 DEFAULT_USER = 'ubuntu'
@@ -15,7 +12,15 @@ pipeline {
          
   }
     stages {
- 
+ 	stage('Initialize')
+ 	{
+ 	     script {
+                    // Define a different Docker image and run tests inside it
+                    def testImage = docker.image('ros:foxy')
+                    testImage.inside {
+                        sh 'source /opt/ros/foxy/local_setup.bash'
+                    }
+ 	}
         stage('Setup') {
             steps {
                 sh 'printenv'
