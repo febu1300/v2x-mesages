@@ -16,7 +16,7 @@ pipeline {
  	{
  	steps {
  	        sh """
- 	           sh 'printenv'
+ 	           sh '/opt/ros_entrypoint.sh '
 		
                 """
                 }
