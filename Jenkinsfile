@@ -1,8 +1,9 @@
 pipeline {
    agent{
-         docker.image('ros:foxy').inside{
- 	 	sh ros_entrypoint.sh
- 	 	}
+         docker.image('ros:foxy').inside
+         {
+ 	  	sh ros_entrypoint.sh
+ 	 }
         }       
    environment {
    	 DEFAULT_USER = 'ubuntu'
