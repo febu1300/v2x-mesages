@@ -15,12 +15,7 @@ pipeline {
  	stage('Initialize')
  	{
  	steps {
- 	        sh """
- 	           whoami
- 	           cd /opt/jenkins/workspace
- 	           ./opt/jenkins/workspace/ros_entrypoint.sh
-		
-                """
+ 	        sh 'opt/jenkins/workspace/ros_entrypoint.sh'
                 }
  	}
         stage('Setup') {
