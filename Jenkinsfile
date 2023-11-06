@@ -16,10 +16,7 @@ pipeline {
  	{
  	steps {
  	        sh """
- 	           echo "$(whoami)"
-		   echo "Set disable_coredump false" >> /etc/sudo.conf
-		   exec /sbin/su-exec "${DEFAULT_USER}"
-		   EXEC="exec"
+ 	           sh 'printenv'
 		
                 """
                 }
