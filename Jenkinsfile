@@ -15,12 +15,10 @@ pipeline {
  	stage('Initialize')
  	{
  	steps {
- 	  dir(path: "/opt/jenkins/workspace") {
-               sh """
- 			sh ros_entrypoint.sh
-                """
-         	
-          }
+ 	 docker.image('ros:foxy').inside{
+ 	 	sh ros_entrypoint.sh
+ 	 }
+                
                 }
  	}
         stage('Setup') {
