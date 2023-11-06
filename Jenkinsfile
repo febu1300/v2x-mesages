@@ -17,9 +17,9 @@ pipeline {
  	     script {
                    
                     def testImage = docker.image('ros:foxy')
-                    testImage.inside("--entrypoint=''") {
+                    testImage.inside("--entrypoint='source /opt/ros/foxy/local_setup.bash'") {
                      	echo "test passed"
-                        source /opt/ros/foxy/local_setup.bash
+                        
                     }
                }
              }
