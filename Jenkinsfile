@@ -13,7 +13,7 @@ pipeline {
     stages {
  	stage('Initialize')
  	{
- 	  docker { image 'ros:foxy' }
+ 	 steps {
  	     script {
                    
                     def testImage = docker.image('ros:foxy')
@@ -21,6 +21,7 @@ pipeline {
                         sh 'source /opt/ros/foxy/local_setup.bash'
                     }
                }
+             }
  	}
         stage('Setup') {
             steps {
