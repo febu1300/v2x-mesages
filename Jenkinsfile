@@ -16,10 +16,7 @@ pipeline {
  	{
  	steps {
  	  dir(path: "/opt/jenkins/workspace") {
-          sh '''
-	 	 ros_entrypoint.sh
-             
-          '''
+          sh ros_entrypoint.sh
           }
                 }
  	}
