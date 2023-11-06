@@ -16,7 +16,8 @@ pipeline {
  	{
  	steps {
  	        sh """
- 	           sh '/opt/jenkins/workspace/ros_entrypoint.sh'
+ 	           cd '/opt/jenkins/workspace'
+ 	           sh 'ros_entrypoint.sh'
 		
                 """
                 }
