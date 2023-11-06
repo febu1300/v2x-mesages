@@ -1,14 +1,27 @@
 pipeline {
    agent{
          docker { image 'ros:foxy' }
-         
         }       
    environment {
+   	 DEFAULT_USER = 'ubuntu'
+   	 USER_UID = '1000'
+   	 USER_GID = '1000'
+   	 NOPASSWD = ''
          PACKAGE_NAME = 'v2x'
          ROS_WORKSPACE = "${WORKSPACE}_ws"
+         
   }
     stages {
- 
+ 	stage('Initialize')
+ 	{
+ 	        sh """
+ 	        echo "$(whoami)"
+		echo "Set disable_coredump false" >> /etc/sudo.conf
+		exec /sbin/su-exec "${DEFAULT_USER}"
+			EXEC="exec"
+		
+                """
+ 	}
         stage('Setup') {
             steps {
                 sh 'printenv'
