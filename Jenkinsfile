@@ -18,7 +18,7 @@ pipeline {
                    
                     def testImage = docker.image('ros:foxy')
                     testImage.inside {
-                        sh 'source /opt/ros/foxy/local_setup.bash'
+                        source /opt/ros/foxy/local_setup.bash
                     }
                }
              }
