@@ -19,6 +19,7 @@ pipeline {
                     def testImage = docker.image('ros:foxy')
                     testImage.inside("--entrypoint=''") {
                      	echo "test passed"
+                     	touch test.txt
                         
                     }
                }
