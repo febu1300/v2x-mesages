@@ -22,18 +22,41 @@ pipeline {
 
  	 steps {
 
- 	 	sh 'echo "test test test test initialize"'
- 	 	sh '/ros_entrypoint.sh'
- 	 	sh 'touch /test.txt'
+ 		sh '/ros_entrypoint.sh'
+ 	 
  	 	}
 	 }
 	 
 	 
         stage('Setup') {
             steps {
-                sh 'echo "Stage 1: Running commands inside the same Docker container"'
+                sh 'printenv'
+                sh """
+                  touch should_be_in_docker.txt
+                  mkdir -p ${ROS_WORKSPACE}/src
+                  cp -R . ${ROS_WORKSPACE}/src/${PACKAGE_NAME}
+                   . /opt/ros/foxy/setup.sh
+                """
             }
         }
-	 
+	         stage('Build') {
+            steps {
+            dir(path: "${ROS_WORKSPACE}") {
+            sh '''
+            . /opt/ros/foxy/setup.sh
+             colcon build 
+          '''
+        }
+            }
+        }
 	}
+	      post {
+    always {
+      dir(path: "${ROS_WORKSPACE}") {
+        archiveArtifacts(artifacts: "**/*.log", fingerprint: true)
+       
+      }
+      sh "rm -rf ${ROS_WORKSPACE}"
+    }
+  }
 }
