@@ -11,7 +11,7 @@ pipeline {
          
   }
     stages {
- 	stage('Initialize')
+ 	stage('Initialize Docker')
  	{
  	 agent {
  	 	docker {
@@ -26,5 +26,13 @@ pipeline {
  	 	sh '/ros_entrypoint.sh'
  	 	}
 	 }
+	 
+	 
+        stage('Setup') {
+            steps {
+                sh 'echo "Stage 1: Running commands inside the same Docker container"'
+            }
+        }
+	 
 	}
 }
