@@ -21,49 +21,13 @@ pipeline {
  	 	}
  	 }
  	 steps {
+ 	       script {
+                    // Set the entry point
+                    sh 'chmod +x /ros_entrypoint.sh'
+                    sh '/ros_entrypoint.sh'
+                }
  	 	sh 'echo "test test test test initialize"'
- 	 }
- 	}
-        stage('Setup') {
-            steps {
-                sh 'printenv'
-                sh """
-                  touch should_be_in_docker.txt
-                  mkdir -p ${ROS_WORKSPACE}/src
-                  cp -R . ${ROS_WORKSPACE}/src/${PACKAGE_NAME}
-                   . /opt/ros/foxy/setup.sh
-                """
-            }
-        }
-        stage('Build') {
-            steps {
-            dir(path: "${ROS_WORKSPACE}") {
-            sh '''
-            . /opt/ros/foxy/setup.sh
-             colcon build 
-          '''
-        }
-            }
-        }
-        stage('Test') {
-            steps {
-              dir(path: "${ROS_WORKSPACE}") {
-          sh '''
-	 . /opt/ros/foxy/setup.sh
-            colcon test-result --all 
-             
-          '''
-          }
-         }
-        }
-    }
-      post {
-    always {
-      dir(path: "${ROS_WORKSPACE}") {
-        archiveArtifacts(artifacts: "**/*.log", fingerprint: true)
-       
-      }
-      sh "rm -rf ${ROS_WORKSPACE}"
-    }
-  }
+ 	 	}
+	 }
+	}
 }
