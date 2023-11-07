@@ -19,7 +19,7 @@ pipeline {
                     def testImage = docker.image('ros:foxy')
                     testImage.inside("--entrypoint=''") {
                      	
-                     	def file = new File("test.txt")
+                     	mkdir -p ${ROS_WORKSPACE}/src
                         
                     }
                }
@@ -29,6 +29,7 @@ pipeline {
             steps {
                 sh 'printenv'
                 sh """
+                  touch should_be_in_docker.txt
                   mkdir -p ${ROS_WORKSPACE}/src
                   cp -R . ${ROS_WORKSPACE}/src/${PACKAGE_NAME}
                    . /opt/ros/foxy/setup.sh
