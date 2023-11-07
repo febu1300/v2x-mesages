@@ -17,7 +17,7 @@ pipeline {
  	 	docker {
  	 	image 'ros:foxy'
  	 	args '-u 1001:1001'
- 	 	entryPoint 'ros_entrypoint.sh'
+ 	 
  	 	}
  	 }
  	 steps {
