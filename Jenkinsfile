@@ -16,16 +16,12 @@ pipeline {
  	 agent {
  	 	docker {
  	 	image 'ros:foxy'
- 	 	args '-u 1001:1001'
+ 	 	args '-u 1001:1001 --entrypoint '' '
  	 
  	 	}
  	 }
  	 steps {
- 	       script {
-                    // Set the entry point
-                    sh 'chmod +x /ros_entrypoint.sh'
-                    sh '/ros_entrypoint.sh'
-                }
+
  	 	sh 'echo "test test test test initialize"'
  	 	}
 	 }
