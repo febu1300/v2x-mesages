@@ -1,5 +1,5 @@
 pipeline {
-   agent any
+   agent none
  
    environment {
    	 DEFAULT_USER = 'ubuntu'
@@ -13,17 +13,15 @@ pipeline {
     stages {
  	stage('Initialize')
  	{
+ 	 agent {
+ 	 	docker {
+ 	 	image 'ros:foxy'
+ 	 	args '--entrypoint /bin/sh'
+ 	 	}
+ 	 }
  	 steps {
- 	     script {
-                   
-                    def testImage = docker.image('ros:foxy')
-                    testImage.inside("--entrypoint=''") {
-                     	testImage.bash(script: 'mkdir -p ${ROS_WORKSPACE}/src')
-                     	
-                        
-                    }
-               }
-             }
+ 	 	sh 'echo "test test test test initialize"'
+ 	 }
  	}
         stage('Setup') {
             steps {
