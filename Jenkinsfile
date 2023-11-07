@@ -18,8 +18,8 @@ pipeline {
                    
                     def testImage = docker.image('ros:foxy')
                     testImage.inside("--entrypoint=''") {
+                     	testImage.bash(script: 'mkdir -p ${ROS_WORKSPACE}/src')
                      	
-                     	mkdir -p ${ROS_WORKSPACE}/src
                         
                     }
                }
