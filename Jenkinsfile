@@ -1,5 +1,11 @@
 pipeline {
-   agent none
+    	 agent {
+ 	 	docker {
+ 	 	image 'ros:foxy'
+ 	 	args '-u root:root'
+ 	 
+ 	 	}
+ 	 }
  
    environment {
    	 DEFAULT_USER = 'ubuntu'
@@ -13,13 +19,7 @@ pipeline {
     stages {
  	stage('Initialize Docker')
  	{
- 	 agent {
- 	 	docker {
- 	 	image 'ros:foxy'
- 	 	args '-u root:root'
- 	 
- 	 	}
- 	 }
+
  	 steps {
 
  	 	sh 'echo "test test test test initialize"'
