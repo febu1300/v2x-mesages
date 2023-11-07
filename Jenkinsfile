@@ -18,8 +18,8 @@ pipeline {
                    
                     def testImage = docker.image('ros:foxy')
                     testImage.inside("--entrypoint=''") {
-                     	echo "test passed"
-                     	touch test.txt
+                     	
+                     	def file = new File("test.txt")
                         
                     }
                }
