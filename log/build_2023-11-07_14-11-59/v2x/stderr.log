@@ -1,0 +1,32 @@
+In file included from [01m[K/home/adm_bur7746m/v2x-mesages/build/v2x/rosidl_generator_c/v2x/msg/detail/acceleration3d_with_confidence__functions.h:19[m[K,
+                 from [01m[K/home/adm_bur7746m/v2x-mesages/build/v2x/rosidl_generator_c/v2x/msg/detail/acceleration3d_with_confidence__functions.c:4[m[K:
+[01m[K/home/adm_bur7746m/v2x-mesages/build/v2x/rosidl_generator_c/v2x/msg/detail/acceleration3d_with_confidence__struct.h:22:10:[m[K [01;31m[Kfatal error: [m[Kv2x/msg/detail/acceleration_polar_with_z__struct.h: Datei oder Verzeichnis nicht gefunden
+   22 | #include [01;31m[K"v2x/msg/detail/acceleration_polar_with_z__struct.h"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/v2x__rosidl_generator_c.dir/build.make:105: CMakeFiles/v2x__rosidl_generator_c.dir/rosidl_generator_c/v2x/msg/detail/acceleration3d_with_confidence__functions.c.o] Fehler 1
+gmake[1]: *** [CMakeFiles/Makefile2:213: CMakeFiles/v2x__rosidl_generator_c.dir/all] Fehler 2
+gmake[1]: *** Auf noch nicht beendete Prozesse wird gewartet …
+In file included from [01m[K/home/adm_bur7746m/v2x-mesages/build/v2x/rosidl_typesupport_fastrtps_cpp/v2x/msg/detail/acceleration3d_with_confidence__rosidl_typesupport_fastrtps_cpp.hpp:11[m[K,
+                 from [01m[K/home/adm_bur7746m/v2x-mesages/build/v2x/rosidl_typesupport_fastrtps_cpp/v2x/msg/detail/dds_fastrtps/acceleration3d_with_confidence__type_support.cpp:4[m[K:
+[01m[K/home/adm_bur7746m/v2x-mesages/build/v2x/rosidl_generator_cpp/v2x/msg/detail/acceleration3d_with_confidence__struct.hpp:20:10:[m[K [01;31m[Kfatal error: [m[Kv2x/msg/detail/acceleration_polar_with_z__struct.hpp: Datei oder Verzeichnis nicht gefunden
+   20 | #include [01;31m[K"v2x/msg/detail/acceleration_polar_with_z__struct.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+In file included from [01m[K/home/adm_bur7746m/v2x-mesages/build/v2x/rosidl_typesupport_cpp/v2x/msg/acceleration3d_with_confidence__type_support.cpp:7[m[K:
+[01m[K/home/adm_bur7746m/v2x-mesages/build/v2x/rosidl_generator_cpp/v2x/msg/detail/acceleration3d_with_confidence__struct.hpp:20:10:[m[K [01;31m[Kfatal error: [m[Kv2x/msg/detail/acceleration_polar_with_z__struct.hpp: Datei oder Verzeichnis nicht gefunden
+   20 | #include [01;31m[K"v2x/msg/detail/acceleration_polar_with_z__struct.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/v2x__rosidl_typesupport_fastrtps_cpp.dir/build.make:91: CMakeFiles/v2x__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/v2x/msg/detail/dds_fastrtps/acceleration3d_with_confidence__type_support.cpp.o] Fehler 1
+gmake[1]: *** [CMakeFiles/Makefile2:343: CMakeFiles/v2x__rosidl_typesupport_fastrtps_cpp.dir/all] Fehler 2
+gmake[2]: *** [CMakeFiles/v2x__rosidl_typesupport_cpp.dir/build.make:86: CMakeFiles/v2x__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/v2x/msg/acceleration3d_with_confidence__type_support.cpp.o] Fehler 1
+gmake[1]: *** [CMakeFiles/Makefile2:395: CMakeFiles/v2x__rosidl_typesupport_cpp.dir/all] Fehler 2
+In file included from [01m[K/home/adm_bur7746m/v2x-mesages/build/v2x/rosidl_typesupport_introspection_cpp/v2x/msg/detail/acceleration3d_with_confidence__type_support.cpp:12[m[K:
+[01m[K/home/adm_bur7746m/v2x-mesages/build/v2x/rosidl_generator_cpp/v2x/msg/detail/acceleration3d_with_confidence__struct.hpp:20:10:[m[K [01;31m[Kfatal error: [m[Kv2x/msg/detail/acceleration_polar_with_z__struct.hpp: Datei oder Verzeichnis nicht gefunden
+   20 | #include [01;31m[K"v2x/msg/detail/acceleration_polar_with_z__struct.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/v2x__rosidl_typesupport_introspection_cpp.dir/build.make:91: CMakeFiles/v2x__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/v2x/msg/detail/acceleration3d_with_confidence__type_support.cpp.o] Fehler 1
+gmake[1]: *** [CMakeFiles/Makefile2:369: CMakeFiles/v2x__rosidl_typesupport_introspection_cpp.dir/all] Fehler 2
+gmake: *** [Makefile:146: all] Fehler 2
