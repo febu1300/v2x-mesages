@@ -16,7 +16,7 @@ pipeline {
  	 agent {
  	 	docker {
  	 	image 'ros:foxy'
- 	 	args '--entrypoint /bin/sh'
+ 	 	args '--entrypoint  ' 
  	 	}
  	 }
  	 steps {
