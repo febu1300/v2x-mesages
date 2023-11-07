@@ -1,4 +1,0 @@
-source;share/v2x/environment/ament_prefix_path.sh
-source;share/v2x/environment/library_path.sh
-source;share/v2x/environment/path.sh
-source;share/v2x/environment/pythonpath.sh

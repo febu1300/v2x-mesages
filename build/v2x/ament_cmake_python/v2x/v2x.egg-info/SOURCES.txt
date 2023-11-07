@@ -1,6 +1,0 @@
-setup.py
-v2x/__init__.py
-v2x.egg-info/PKG-INFO
-v2x.egg-info/SOURCES.txt
-v2x.egg-info/dependency_links.txt
-v2x.egg-info/top_level.txt

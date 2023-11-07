@@ -1,2 +1,0 @@
-Invoking command in '/home/adm_bur7746m/v2x-mesages/build/v2x': CMAKE_PREFIX_PATH=/opt/ros/humble:/opt/ros/foxy /usr/bin/cmake --build /home/adm_bur7746m/v2x-mesages/build/v2x -- -j8 -l8
-Invoked command in '/home/adm_bur7746m/v2x-mesages/build/v2x' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble:/opt/ros/foxy /usr/bin/cmake --build /home/adm_bur7746m/v2x-mesages/build/v2x -- -j8 -l8
