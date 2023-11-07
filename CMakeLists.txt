@@ -25,6 +25,11 @@ find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Acceleration3dWithConfidence.msg"
+  "msg/AccelerationCartesian.msg"
+  "msg/AccelerationComponent.msg"
+  "msg/AccelerationMagnitude.msg"
+  "msg/AccelerationPolarWithZ.msg"
+  "msg/CartesianAngle.msg"
 )
 
 if(BUILD_TESTING)
