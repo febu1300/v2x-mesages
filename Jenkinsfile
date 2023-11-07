@@ -24,6 +24,7 @@ pipeline {
 
  	 	sh 'echo "test test test test initialize"'
  	 	sh '/ros_entrypoint.sh'
+ 	 	sh 'touch /test.txt'
  	 	}
 	 }
 	 
