@@ -28,7 +28,6 @@ pipeline {
             steps {
                 sh 'echo "${ROS_WORKSPACE}"'
                 sh """
-         
                   mkdir -p ${ROS_WORKSPACE}/src
                   cp -R . ${ROS_WORKSPACE}/src/${PACKAGE_NAME}
                    . /opt/ros/foxy/setup.sh
@@ -39,8 +38,7 @@ pipeline {
         }
 	 stage('Test') {
             steps {
-            dir(path: "${ROS_WORKSPACE}") {
-       			
+            dir(path: "${ROS_WORKSPACE}") {	
 	    sh "echo Im running in ${ROS_WORKSPACE}"
             sh 'colcon test --event-handlers console_cohesion+'
         }
