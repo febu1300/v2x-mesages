@@ -50,7 +50,7 @@ pipeline {
 post {
     always {
       
-        archiveArtifacts(artifacts: '${ROS_WORKSPACE}/log/*', fingerprint: true)
+        archiveArtifacts(artifacts: 'log/*', fingerprint: true)
        
       
       sh "rm -rf ${ROS_WORKSPACE}"
