@@ -49,7 +49,7 @@ pipeline {
 	      post {
     always {
       dir(path: "${ROS_WORKSPACE}") {
-        archiveArtifacts(artifacts: "**/*.log", fingerprint: true)
+        archiveArtifacts(artifacts: 'log/build_*/${PACKAGE_NAME}/**/*.log', fingerprint: true)
        
       }
       sh "rm -rf ${ROS_WORKSPACE}"
