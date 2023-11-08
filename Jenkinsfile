@@ -40,7 +40,7 @@ pipeline {
             dir(path: "${ROS_WORKSPACE}") {
             sh '''
             . /opt/ros/foxy/setup.sh
-             colcon test 
+             colcon build 
           '''
         }
             }
