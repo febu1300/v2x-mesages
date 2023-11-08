@@ -32,16 +32,16 @@ pipeline {
                   mkdir -p ${ROS_WORKSPACE}/src
                   cp -R . ${ROS_WORKSPACE}/src/${PACKAGE_NAME}
                    . /opt/ros/foxy/setup.sh
-                   
+                   sh 'colcon build'
                 """
             }
         }
 	 stage('Test') {
             steps {
             dir(path: "${ROS_WORKSPACE}") {
-       
-             
-            sh 'colcon build'
+       			
+            sh 'source install/local_setup.sh'
+            sh 'colcon test'
         }
             }
         }
