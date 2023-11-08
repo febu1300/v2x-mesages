@@ -33,6 +33,7 @@ pipeline {
                   cp -R . ${ROS_WORKSPACE}/src/${PACKAGE_NAME}
                    . /opt/ros/foxy/setup.sh
                    chmod -R 777 ${ROS_WORKSPACE}
+                   chmod -R 777 ${ROS_WORKSPACE}/src/${PACKAGE_NAME}
                 """
             }
         }
