@@ -42,8 +42,7 @@ pipeline {
              sh "pwd"
              
             sh '''
-           
-            colcon build 
+              colcon build 
              
           '''
         }
