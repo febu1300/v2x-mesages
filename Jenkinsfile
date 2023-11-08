@@ -32,7 +32,7 @@ pipeline {
                   mkdir -p ${ROS_WORKSPACE}/src
                   cp -R . ${ROS_WORKSPACE}/src/${PACKAGE_NAME}
                    . /opt/ros/foxy/setup.sh
-                   colcon build
+                   chmod -R 777 ${ROS_WORKSPACE}
                 """
             }
         }
