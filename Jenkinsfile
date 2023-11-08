@@ -39,12 +39,9 @@ pipeline {
 	 stage('Test') {
             steps {
             dir(path: "${ROS_WORKSPACE}") {
-             sh "pwd"
+       
              
-            sh '''
-              colcon build 
-             
-          '''
+            sh 'colcon build'
         }
             }
         }
