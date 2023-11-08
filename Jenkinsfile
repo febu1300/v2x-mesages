@@ -39,11 +39,11 @@ pipeline {
 	 stage('Test') {
             steps {
             
-            dir(path: "${ROS_WORKSPACE}") {	
+          
 	   
          sh "ls ${ROS_WORKSPACE}/src/${PACKAGE_NAME}"
 
-        }
+ 
             }
         }
 	}
