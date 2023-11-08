@@ -41,7 +41,7 @@ pipeline {
 	 stage('Test') {
             steps {
             
-	   sh "source install/setup.bash"
+	   sh '. install/setup.sh'
            sh "colcon test"
  
             }
