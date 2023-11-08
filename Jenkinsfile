@@ -41,8 +41,8 @@ pipeline {
 	 stage('Test') {
             steps {
             
-	   sh '. install/setup.sh'
-           sh "colcon test"
+	   sh '. ${ROS_WORKSPACE}/install/setup.sh'
+           sh 'colcon test'
  
             }
         }
@@ -50,7 +50,7 @@ pipeline {
 post {
     always {
       
-        archiveArtifacts(artifacts: 'log/test_*/${PACKAGE_NAME}', fingerprint: true)
+        archiveArtifacts(artifacts: 'log/test_*', fingerprint: true)
        
       
       sh "rm -rf ${ROS_WORKSPACE}"
