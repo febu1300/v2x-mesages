@@ -41,13 +41,13 @@ pipeline {
             steps {
             dir(path: "${ROS_WORKSPACE}") {
        			
-            sh 'source install/local_setup.sh'
-            sh 'colcon test'
+	    sh "echo Im running in ${ROS_WORKSPACE}"
+            sh 'colcon test --event-handlers console_cohesion+'
         }
             }
         }
 	}
-	      post {
+post {
     always {
       dir(path: "${ROS_WORKSPACE}") {
         archiveArtifacts(artifacts: 'log/build_*/${PACKAGE_NAME}/**/*.log', fingerprint: true)
