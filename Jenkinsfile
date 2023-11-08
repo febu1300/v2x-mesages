@@ -41,7 +41,7 @@ pipeline {
 	 stage('Test') {
             steps {
             
-	   sh '. ${ROS_WORKSPACE}/install/setup.sh'
+	   sh '. install/setup.sh'
            sh 'colcon test'
  
             }
