@@ -41,7 +41,7 @@ pipeline {
             
           
 	   
-         sh "ls ${ROS_WORKSPACE}/src/${PACKAGE_NAME}"
+         sh "colcon test"
 
  
             }
