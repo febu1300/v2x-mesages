@@ -26,17 +26,29 @@ pipeline {
 	 
         stage('Setup') {
             steps {
-                sh 'printenv'
+                sh 'echo "${ROS_WORKSPACE}"'
                 sh """
          
                   mkdir -p ${ROS_WORKSPACE}/src
                   cp -R . ${ROS_WORKSPACE}/src/${PACKAGE_NAME}
                    . /opt/ros/foxy/setup.sh
-                   colcon build 
+                   
                 """
             }
         }
-
+	 stage('Test') {
+            steps {
+            dir(path: "${ROS_WORKSPACE}") {
+             sh "pwd"
+             
+            sh '''
+           
+            colcon build 
+             
+          '''
+        }
+            }
+        }
 	}
 	      post {
     always {
