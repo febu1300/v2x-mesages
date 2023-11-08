@@ -32,19 +32,11 @@ pipeline {
                   mkdir -p ${ROS_WORKSPACE}/src
                   cp -R . ${ROS_WORKSPACE}/src/${PACKAGE_NAME}
                    . /opt/ros/foxy/setup.sh
+                   colcon build 
                 """
             }
         }
-	 stage('Test') {
-            steps {
-            dir(path: "${ROS_WORKSPACE}") {
-            sh '''
-            . /opt/ros/foxy/setup.sh
-             colcon build 
-          '''
-        }
-            }
-        }
+
 	}
 	      post {
     always {
