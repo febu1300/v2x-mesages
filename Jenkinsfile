@@ -49,10 +49,10 @@ pipeline {
 	}
 post {
     always {
-      dir(path: "${ROS_WORKSPACE}") {
-        archiveArtifacts(artifacts: '/opt/jenkins/workspace/ros2branch_pipeline_main_ws/log', fingerprint: true)
+      
+        archiveArtifacts(artifacts: '${ROS_WORKSPACE}/log/*', fingerprint: true)
        
-      }
+      
       sh "rm -rf ${ROS_WORKSPACE}"
     }
   }
