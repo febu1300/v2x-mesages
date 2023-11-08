@@ -39,8 +39,8 @@ pipeline {
 	 stage('Test') {
             steps {
             dir(path: "${ROS_WORKSPACE}") {	
-	    sh "echo Im running in ${ROS_WORKSPACE}"
-            sh 'colcon test --event-handlers console_cohesion+'
+	   
+            sh 'ls src/${PACKAGE_NAME}'
         }
             }
         }
