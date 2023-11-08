@@ -49,12 +49,8 @@ pipeline {
 	}
 post {
     always {
-      script{
-      def testDirectory = findFiles(glob:"${ROS_WORKSPACE}/log/test_*/*").first()
-      if (testDirectory != null) {
               archiveArtifacts(artifacts: 'log/test_*/', fingerprint: true)
-      }
-      
+   
       }
 
         
